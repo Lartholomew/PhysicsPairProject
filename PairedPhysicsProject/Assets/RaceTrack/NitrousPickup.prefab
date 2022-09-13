@@ -108,4 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f295db277a49a741b47396b11b1b289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NitrousAmount: 10
+  NitrousAmount: 50

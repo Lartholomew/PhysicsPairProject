@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 // TODO: known bug, car doesnt stop reversing after it starts reversing
 public class RacingController : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class RacingController : MonoBehaviour
     bool isBraking = false;
     bool isNitro = false;
     public float nitroFuel = 0.0f;
+    public TMP_Text nitroText;
 
 
     public WheelAxis[] axles;
@@ -61,6 +63,7 @@ public class RacingController : MonoBehaviour
     {
         UpdateCarState();
         UpdateControlls();
+        UpdateUI();
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -182,6 +185,14 @@ public class RacingController : MonoBehaviour
         }
         averageRPM = totalRPM / nOfWheels;
         isMovingReverse = averageRPM < -parkingThreshold; // are wheels spinning in reverse
+    }
+
+    void UpdateUI()
+    {
+        if (nitroFuel > 0)
+            nitroText.text = "Boost: " + nitroFuel.ToString("###");
+        else
+            nitroText.text = "Boost: 0";
     }
 
     private void OnTriggerEnter(Collider other)
