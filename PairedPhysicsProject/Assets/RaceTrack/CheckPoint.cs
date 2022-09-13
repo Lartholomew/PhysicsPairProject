@@ -10,6 +10,8 @@ public class CheckPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print("enter trigger");
+
         if (other.gameObject.CompareTag("Player"))
         {
             if (!finishLine)
