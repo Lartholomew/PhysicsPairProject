@@ -819,7 +819,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399178242}
-  m_LocalRotation: {x: 0.15870927, y: -0.000000047539466, z: 0.00000000764181, w: 0.9873254}
+  m_LocalRotation: {x: 0.15870932, y: -0.0000000126550095, z: 0.0000000020342514, w: 0.9873254}
   m_LocalPosition: {x: -37.4, y: 59.99, z: 8.560003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1631,9 +1631,9 @@ MonoBehaviour:
   - {fileID: 1117593084}
   confetti: {fileID: 2121323191}
   endStateUIObj: {fileID: 673355843}
-  counting: 0
+  counting: 1
   currentTime: 0
-  text: {fileID: 1866410872}
+  timerText: {fileID: 0}
 --- !u!4 &806308620
 Transform:
   m_ObjectHideFlags: 0
@@ -3586,7 +3586,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768022387}
-  m_LocalRotation: {x: 0.15870927, y: -0.000000047539466, z: 0.00000000764181, w: 0.9873254}
+  m_LocalRotation: {x: 0.15870932, y: -0.0000000126550095, z: 0.0000000020342514, w: 0.9873254}
   m_LocalPosition: {x: 0, y: 1.6900024, z: -5.1208935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
