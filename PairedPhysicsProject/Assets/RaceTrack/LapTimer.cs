@@ -12,7 +12,7 @@ public class LapTimer : MonoBehaviour
     public bool counting = false;
     public float currentTime;
 
-    [SerializeField] TMP_Text text;
+    [SerializeField] TMP_Text timerText;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class LapTimer : MonoBehaviour
         if (counting)
         {
             currentTime += Time.deltaTime;
-            text.text = currentTime.ToString("##.##");
+            timerText.text = currentTime.ToString("##.##");
         }
             
     }
