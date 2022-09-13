@@ -11,9 +11,9 @@ public class NitrousPickup : MonoBehaviour
         print("enter trigger");
 
         //if player, then take player and give nitrous
-        if (other.TryGetComponent<RacingController>(out RacingController rc))
+        if (other.CompareTag("Player"))
         {
-            rc.nitroFuel += NitrousAmount;
+            RacingController.instance.nitroFuel += NitrousAmount;
         }
     }
 }

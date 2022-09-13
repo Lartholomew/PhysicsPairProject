@@ -7,6 +7,7 @@ public class CheckPoint : MonoBehaviour
     public bool finishLine = false;
 
     public bool passed = false;
+    public bool current = false;
 
     private void OnTriggerEnter(Collider other)
     {

@@ -8,6 +8,8 @@ public class RacingController : MonoBehaviour
     public enum CarState { Driving, Reverse, Brake, Parked, Nitro}
 
 
+    public static RacingController instance;
+
     Rigidbody rb;
     private float averageRPM = 0;
     private bool isMovingReverse = false;
@@ -47,6 +49,8 @@ public class RacingController : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
+
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0, -0.5f, -0.18f);
         defaultMaxSpeed = maxSpeed;

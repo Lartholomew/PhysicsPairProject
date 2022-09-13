@@ -32,9 +32,11 @@ public class LapTimer : MonoBehaviour
     {
         foreach(CheckPoint c in checkPoints)
         {
+            c.current = false;
             if(c == checkPoint)
             {
                 c.passed = true;
+                c.current = true;
             }
         }
     }
