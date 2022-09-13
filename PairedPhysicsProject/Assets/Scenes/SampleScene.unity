@@ -182,7 +182,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23610894}
-  m_LocalRotation: {x: 0.19386531, y: 0.000000008439973, z: -0.0000000016678602, w: 0.9810282}
+  m_LocalRotation: {x: 0.19386531, y: -0.000000008439973, z: 0.0000000016678602, w: 0.9810282}
   m_LocalPosition: {x: 0, y: 3.04, z: -4.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -261,176 +261,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 498191776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2352785683437d4386f7cbaf4771d80, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ed7b14eb17d9e1409311788f1313079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nitroFuel: 100
-  axles:
-  - leftWheel: {fileID: 498191782}
-    rightWheel: {fileID: 498191781}
-    isMotor: 1
-    isSteering: 1
-  - leftWheel: {fileID: 498191780}
-    rightWheel: {fileID: 498191779}
-    isMotor: 1
-    isSteering: 0
-  maxMotorTorque: 90000
-  maxSpeed: 20
-  nitroStrength: 80
-  motorCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.012512207
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.9916153
-      value: 0
-      inSlope: -2.2872865
-      outSlope: -2.2872865
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.02941834
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  normalDampening: 0.25
-  brakesDampening: 100
-  brakesThreshold: 0.25
-  parkingThreshold: 20
-  maxSteeringAngle: 20
-  minSteeringAngle: 10
-  steeringAngleCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.002922058
-      value: 0.9996948
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.99583435
-      value: -0.014160156
-      inSlope: -1.6120481
-      outSlope: -1.6120481
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.08265606
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  steeringWheelSpeed: 30
-  antiRollStrength: 100
---- !u!114 &498191778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498191776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 556f5ed478d1f6944a2b55db4277c119, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 498191777}
-        m_TargetAssemblyTypeName: RacingController, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 90cbc122-d878-4364-8488-2c9aede9c2fc
-    m_ActionName: CarControls/Drive[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 498191777}
-        m_TargetAssemblyTypeName: RacingController, Assembly-CSharp
-        m_MethodName: OnBrake
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 08f8a091-9edc-4ba6-83e6-5904b7849ff3
-    m_ActionName: CarControls/Brake[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 498191777}
-        m_TargetAssemblyTypeName: RacingController, Assembly-CSharp
-        m_MethodName: OnNitro
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: e019cacd-b06d-4c12-9bb2-b1a510829625
-    m_ActionName: CarControls/Nitro[/Keyboard/shift]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: CarControls
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!146 &498191779 stripped
-WheelCollider:
-  m_CorrespondingSourceObject: {fileID: 146255619480180394, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
-  m_PrefabInstance: {fileID: 498191775}
-  m_PrefabAsset: {fileID: 0}
---- !u!146 &498191780 stripped
-WheelCollider:
-  m_CorrespondingSourceObject: {fileID: 146117123884337712, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
-  m_PrefabInstance: {fileID: 498191775}
-  m_PrefabAsset: {fileID: 0}
---- !u!146 &498191781 stripped
-WheelCollider:
-  m_CorrespondingSourceObject: {fileID: 146675311010191164, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
-  m_PrefabInstance: {fileID: 498191775}
-  m_PrefabAsset: {fileID: 0}
---- !u!146 &498191782 stripped
-WheelCollider:
-  m_CorrespondingSourceObject: {fileID: 146158935166265002, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
-  m_PrefabInstance: {fileID: 498191775}
-  m_PrefabAsset: {fileID: 0}
+  car: {fileID: 498191776}
+  resetPos: {fileID: 0}
 --- !u!4 &498191785 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4893793585455004, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
@@ -700,7 +535,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.19386531, y: 0.000000008439973, z: -0.0000000016678602, w: 0.9810282}
+  m_LocalRotation: {x: 0.19386531, y: -0.000000008439973, z: 0.0000000016678602, w: 0.9810282}
   m_LocalPosition: {x: 0, y: 3.04, z: -4.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
