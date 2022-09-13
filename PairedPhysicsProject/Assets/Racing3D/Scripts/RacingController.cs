@@ -10,7 +10,8 @@ public class RacingController : MonoBehaviour
 
     public static RacingController instance;
 
-    Rigidbody rb;
+    [HideInInspector]
+    public Rigidbody rb;
     private float averageRPM = 0;
     private bool isMovingReverse = false;
     private CarState state;
@@ -181,5 +182,16 @@ public class RacingController : MonoBehaviour
         }
         averageRPM = totalRPM / nOfWheels;
         isMovingReverse = averageRPM < -parkingThreshold; // are wheels spinning in reverse
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print("enter RC trigger");
+
+        if (other.CompareTag("Death"))
+        {
+            print("Death here");
+            LapTimer.instance.RespawnCar();
+        }
     }
 }

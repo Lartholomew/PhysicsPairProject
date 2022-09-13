@@ -43,18 +43,34 @@ public class LapTimer : MonoBehaviour
 
     public void CheckWinCondition()
     {
+        print("enter win");
+
         bool win = true;
         foreach(CheckPoint c in checkPoints)
         {
-            if (!c.passed)
+            if (!c.passed && !c.finishLine)
                 win = false;
         }
 
         if (win)
         {
+            print("win");
             counting = false;
 
             //bring up menu and freeze player movement here
+        }
+    }
+
+    public void RespawnCar()
+    {
+        foreach(CheckPoint checkPoint in checkPoints)
+        {
+            if (checkPoint.current)
+            {
+                RacingController.instance.transform.position = checkPoint.transform.position;
+                RacingController.instance.transform.forward = checkPoint.transform.forward;
+                RacingController.instance.rb.velocity = Vector3.zero;
+            }
         }
     }
 }
