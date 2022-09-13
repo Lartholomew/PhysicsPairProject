@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class ResetCar : MonoBehaviour
 {
-    [SerializeField] GameObject car;
-    public Transform resetPos;
     Rigidbody rb;
 
     private void Start()
@@ -16,10 +14,7 @@ public class ResetCar : MonoBehaviour
     {
         if(context.performed)
         {
-            Debug.Log("Reset");
-            rb.velocity = Vector3.zero;
-            car.transform.position = resetPos.position;
-            car.transform.rotation = resetPos.rotation;
+            LapTimer.instance.RespawnCar();
         }
     }
 }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class LapTimer : MonoBehaviour
 {
     public static LapTimer instance;
@@ -9,6 +9,8 @@ public class LapTimer : MonoBehaviour
 
     public bool counting = false;
     public float currentTime;
+
+    [SerializeField] TMP_Text text;
 
     // Start is called before the first frame update
     void Start()
@@ -20,14 +22,18 @@ public class LapTimer : MonoBehaviour
     void Update()
     {
         if (counting)
+        {
             currentTime += Time.deltaTime;
+            text.text = currentTime.ToString("##.##");
+        }
+            
     }
 
     public void StartTimer()
     {
         counting = true;
     }
-
+    
     public void PassCheckPoint(CheckPoint checkPoint)
     {
         foreach(CheckPoint c in checkPoints)
