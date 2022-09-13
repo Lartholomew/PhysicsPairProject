@@ -6,7 +6,6 @@ public class LapTimer : MonoBehaviour
 {
     public static LapTimer instance;
     public List<CheckPoint> checkPoints;
-
     public bool counting = false;
     public float currentTime;
 
