@@ -6,11 +6,9 @@ public class LapTimer : MonoBehaviour
 {
     public static LapTimer instance;
     public List<CheckPoint> checkPoints;
-<<<<<<< Updated upstream
-=======
+    [SerializeField] GameObject confetti;
     public GameObject endStateUIObj;
 
->>>>>>> Stashed changes
     public bool counting = false;
     public float currentTime;
 
@@ -67,6 +65,7 @@ public class LapTimer : MonoBehaviour
             print("win");
             counting = false;
             endStateUIObj.SetActive(true);
+            confetti.SetActive(true);
             Time.timeScale = 0.1f;
             //bring up menu and freeze player movement here
 
