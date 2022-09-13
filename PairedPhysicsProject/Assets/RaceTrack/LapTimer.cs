@@ -18,6 +18,8 @@ public class LapTimer : MonoBehaviour
     void Start()
     {
         instance = this;
+
+        Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
@@ -66,7 +68,7 @@ public class LapTimer : MonoBehaviour
             counting = false;
             endStateUIObj.SetActive(true);
             confetti.SetActive(true);
-            Time.timeScale = 0.1f;
+            Time.timeScale = 0.5f;
             //bring up menu and freeze player movement here
 
         }
