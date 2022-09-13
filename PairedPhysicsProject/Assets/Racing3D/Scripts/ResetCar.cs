@@ -5,8 +5,9 @@ using UnityEngine.InputSystem;
 public class ResetCar : MonoBehaviour
 {
     [SerializeField] GameObject car;
-    [SerializeField] Transform resetPos;
+    public Transform resetPos;
     Rigidbody rb;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
