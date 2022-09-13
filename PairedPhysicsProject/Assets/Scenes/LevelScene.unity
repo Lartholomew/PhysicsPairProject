@@ -460,6 +460,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 310489452362357442, guid: ea1b654238f07a54ab10db09609b9c05, type: 3}
   m_PrefabInstance: {fileID: 117203768}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &152277413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1465699274065056, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
+  m_PrefabInstance: {fileID: 806353581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &152277414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152277413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed7b14eb17d9e1409311788f1313079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &193123017
 GameObject:
   m_ObjectHideFlags: 3
@@ -819,7 +836,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399178242}
-  m_LocalRotation: {x: 0.15870932, y: -0.0000000126550095, z: 0.0000000020342514, w: 0.9873254}
+  m_LocalRotation: {x: 0.1587093, y: 0.0000000022245081, z: -3.5758208e-10, w: 0.9873254}
   m_LocalPosition: {x: -37.4, y: 59.99, z: 8.560003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1633,7 +1650,7 @@ MonoBehaviour:
   endStateUIObj: {fileID: 673355843}
   counting: 1
   currentTime: 0
-  timerText: {fileID: 0}
+  timerText: {fileID: 1866410872}
 --- !u!4 &806308620
 Transform:
   m_ObjectHideFlags: 0
@@ -1672,6 +1689,46 @@ PrefabInstance:
       propertyPath: nitroText
       value: 
       objectReference: {fileID: 1176508565}
+    - target: {fileID: 498191778, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 498191778, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: 9dd05c9e-2347-41df-9f77-1ca5fa192e0e
+      objectReference: {fileID: 0}
+    - target: {fileID: 498191778, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: CarControls/ResetCar[/Keyboard/r]
+      objectReference: {fileID: 0}
+    - target: {fileID: 498191778, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 498191778, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498191778, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 152277414}
+    - target: {fileID: 498191778, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 498191778, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnResetCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 498191778, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResetCar, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 498191778, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1465699274065056, guid: fe0ac1257781b69468adab29338b1bc4, type: 3}
       propertyPath: m_Name
       value: Car
@@ -3586,7 +3643,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768022387}
-  m_LocalRotation: {x: 0.15870932, y: -0.0000000126550095, z: 0.0000000020342514, w: 0.9873254}
+  m_LocalRotation: {x: 0.1587093, y: 0.0000000022245081, z: -3.5758208e-10, w: 0.9873254}
   m_LocalPosition: {x: 0, y: 1.6900024, z: -5.1208935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
